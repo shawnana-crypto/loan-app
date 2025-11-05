@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人品借款 - 借款详情</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 主内容 -->
+<main id="app" class="app-container">
+
+  <!-- 借款信息卡片 -->
+  <section class="card">
+    <div class="card-header">
+      <h1>人品借款详情</h1>
+      <span id="loanStatus" class="status">还款中</span>
+    </div>
+    <div class="card-body">
+      <div class="info-grid">
+        <div>
+          <p>借款金额</p>
+          <strong>¥8,000.00</strong>
+        </div>
+        <div>
+          <p>年利率</p>
+          <strong>22.1%</strong>
+        </div>
+        <div>
+          <p>总期数</p>
+          <strong>12期</strong>
+        </div>
+        <div>
+          <p>已还期数</p>
+          <strong id="paidInstallments">3期</strong>
+        </div>
+      </div>
+      <div class="progress-container">
+        <span id="progressText">3/12期 (25%)</span>
+        <div class="progress-bar">
+          <div id="progressBar" class="progress-value" style="width:25%"></div>
+        </div>
+      </div>
+      <div class="info-grid">
+        <div>
+          <p>首次借款日期</p>
+          <strong>2025-09-05</strong>
+        </div>
+        <div id="nextPaymentDateContainer">
+          <p>下次还款日</p>
+          <strong id="nextPaymentDate">2025-12-05</strong>
+        </div>
+        <div>
+          <p>剩余本金</p>
+          <strong id="remainingPrincipal">¥6,106.25</strong>
+        </div>
+        <div>
+          <p>还款方式</p>
+          <strong>按月等额还款</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 本期应还 -->
+  <section class="card current-payment">
+    <h2>下期应还 (第4期)</h2>
+    <div class="current-info">
+      <div>
+        <p>应还金额</p>
+        <strong>¥757.22</strong>
+        <p>包含本金 ¥658.75，利息 ¥98.47</p>
+        <p>还款日期: 2025-12-05</p>
+      </div>
+      <button id="repayNow" class="btn-primary">立即还款</button>
+    </div>
+  </section>
+
+  <!-- 一次性结清 -->
+  <section class="card settlement">
+    <div class="settle-info">
+      <div>
+        <h3>一次性结清</h3>
+        <p>提前结清剩余所有款项，可节省部分利息</p>
+      </div>
+      <strong id="settlementAmount">¥5,895.48</strong>
+    </div>
+    <button id="settleNow" class="btn-secondary">立即结清</button>
+  </section>
+
+</main>
+
+<!-- Toast -->
+<div id="toast" class="toast">操作成功</div>
+
+<script src="app.js"></script>
+</body>
+</html>
