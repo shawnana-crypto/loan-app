@@ -1,0 +1,67 @@
+/* 全屏 App 样式 */
+body, html {
+  margin:0; padding:0; font-family:sans-serif; background:#f3f4f6;
+  height:100%; width:100%;
+}
+
+.app-container {
+  max-width:480px;
+  margin:0 auto;
+  padding:12px;
+}
+
+/* 卡片样式 */
+.card {
+  background:#fff;
+  border-radius:12px;
+  padding:16px;
+  margin-bottom:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card-header {
+  display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;
+}
+.status {
+  font-size:12px; padding:4px 8px; border-radius:8px;
+  background:#dbeafe; color:#3b82f6;
+}
+
+/* 信息网格 */
+.info-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-bottom:12px;
+}
+.info-grid p { font-size:12px; color:#6b7280; margin:0; }
+.info-grid strong { font-size:16px; display:block; margin-top:4px; }
+
+/* 进度条 */
+.progress-container { margin-bottom:12px; font-size:12px; color:#374151; }
+.progress-bar { height:6px; background:#e5e7eb; border-radius:3px; overflow:hidden; margin-top:4px;}
+.progress-value { height:100%; background:#3b82f6; transition:width 0.3s ease; }
+
+/* 当前还款 */
+.current-payment h2 { margin-bottom:12px; font-size:14px; color:#374151; }
+.current-info { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+.current-info p { font-size:12px; color:#6b7280; margin:2px 0; }
+
+/* 按钮 */
+.btn-primary {
+  background:#3b82f6; color:#fff; border:none; padding:10px 16px; border-radius:8px; cursor:pointer;
+}
+.btn-secondary {
+  background:#10b981; color:#fff; border:none; padding:10px 16px; border-radius:8px; cursor:pointer;
+}
+
+/* 一次性结清 */
+.settlement .settle-info { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+
+/* Toast */
+.toast {
+  position:fixed; bottom:24px; left:50%; transform:translateX(-50%);
+  background:#111; color:#fff; padding:8px 16px; border-radius:999px;
+  opacity:0; transition:opacity 0.3s ease;
+}
+.toast.show { opacity:1; }
